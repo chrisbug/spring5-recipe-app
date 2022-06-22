@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import guru.springframework.domain.UnitOfMeasure;
 
-public interface UnitOfMesurementRepository extends CrudRepository<UnitOfMeasure, Long> {
+public interface UnitOfMeasureRepository extends CrudRepository<UnitOfMeasure, Long> {
     Optional<UnitOfMeasure> findByDescription(String description);
 }
