@@ -55,4 +55,8 @@ public class Recipe {
         this.ingredients.add(ingredient);
         return this;
     }
+
+    public Set<Ingredient> getIngredients() {
+        return this.ingredients;
+    }
 }
