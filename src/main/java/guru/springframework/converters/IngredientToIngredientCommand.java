@@ -2,7 +2,7 @@ package guru.springframework.converters;
 
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
-
+import org.springframework.core.convert.converter.Converter;
 import guru.springframework.commands.IngredientCommand;
 import guru.springframework.domain.Ingredient;
 import lombok.Synchronized;
@@ -11,7 +11,7 @@ import lombok.Synchronized;
 public class IngredientToIngredientCommand implements Converter<Ingredient, IngredientCommand> {
   private final UnitOfMeasureToUnitOfMeasureCommand uomConverter;
 
-  public IngredientToIngredientCommand(UnitOfMeasureCommandToUnitOfMeasure uomConverter) {
+  public IngredientToIngredientCommand(UnitOfMeasureToUnitOfMeasureCommand uomConverter) {
     this.uomConverter = uomConverter;
   }
 

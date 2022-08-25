@@ -9,7 +9,7 @@ import guru.springframework.domain.Category;
 import lombok.Synchronized;
 
 @Component
-public class CategoryToCategoryCommand implements Converter<CategoryCommand, Category> {
+public class CategoryToCategoryCommand implements Converter<Category, CategoryCommand> {
 
   @Synchronized
   @Nullable

@@ -1,9 +1,9 @@
 package guru.springframework.converters;
 
+import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.databind.util.Converter;
 
 import guru.springframework.commands.IngredientCommand;
 import guru.springframework.domain.Ingredient;
