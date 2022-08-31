@@ -31,19 +31,19 @@ public class RecipeController {
             System.out.println(ing.getAmount() + " " + ing.getDescription());
         }
         model.addAttribute("recipe", recipeService.findById(Long.valueOf(id)));
-        return "recipe/";
+        return "recipe/show";
     }
 
     @RequestMapping("/recipe/new")
     public String newRecipe(Model model) {
         model.addAttribute("recipe", new RecipeCommand());
-        return "recipe/recipeform.html";
+        return "recipe/recipeform";
     }
 
     @RequestMapping("/recipe/{id}/update")
     public String updateRecipe(@PathVariable String id, Model model) {
         model.addAttribute("recipe", recipeService.findCommandById(Long.valueOf(id)));
-        return "recipe/recipeform.html";
+        return "recipe/recipeform";
     }
 
     @RequestMapping("/recipe/{id}/delete")
